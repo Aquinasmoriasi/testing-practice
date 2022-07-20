@@ -1,4 +1,4 @@
-describe('your string,', () => {
+describe('The string,', () => {
   const stringLength = (string) => string.split('').length;
   test('is 3 letters long', () => {
     expect(stringLength('dog')).toBe(3);
@@ -11,7 +11,7 @@ describe('your string,', () => {
   });
 });
 
-describe('your string,', () => {
+describe('The string,', () => {
   const reverseStr = (string) => string
     .split('')
     .reverse()
@@ -82,4 +82,34 @@ describe('The answer is,', () => {
   test('the division of the two numbers,', () => {
     expect(calculator.divide(-3, -3)).toBe(1);
   });
+});
+
+const capitalize = (string) => {
+  const firstLetter = string.split('').slice(0, 1).toString().toUpperCase();
+  const otherLetters = string.toLowerCase().split('').slice(1).join('');
+  return firstLetter.concat(otherLetters);
+};
+
+test('The string is in toggle case', () => {
+  expect(capitalize('DOG')).toBe('Dog');
+});
+
+test('The string is in toggle case', () => {
+  expect(capitalize('DOG')).toBe('Dog');
+});
+
+test('The string is in toggle case', () => {
+  expect(capitalize('dOG')).toBe('Dog');
+});
+
+test('The string is in toggle case', () => {
+  expect(capitalize('mAPLe')).toBe('Maple');
+});
+
+test('The string is in toggle case', () => {
+  expect(capitalize('Maple')).toBe('Maple');
+});
+
+test('The string is in toggle case', () => {
+  expect(capitalize('maple')).toBe('Maple');
 });
